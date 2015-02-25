@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <OutputDebug>..\..\output\Bin\Debug</OutputDebug>
+    <OutputRelease>..\..\output\Bin\Release</OutputRelease>
+    <OutputDebug64>..\..\output\Bin\Debug64</OutputDebug64>
+    <OutputRelease64>..\..\output\Bin\Release64</OutputRelease64>
+    <PDBRelease>..\..\output\bin\PDBRelease</PDBRelease>
+    <MAPRelease>..\..\output\bin\MAPRelease</MAPRelease>
+    <LibDebug>..\..\output\Lib\Debug</LibDebug>
+    <LibRelease>..\..\output\Lib\Release</LibRelease>
+    <LibDebug64>..\..\output\Lib\Debug64</LibDebug64>
+    <LibRelease64>..\..\output\Lib\Release64</LibRelease64>
+    <TempDebug>..\..\Obj\Debug</TempDebug>
+    <TempRelease>..\..\Obj\Release</TempRelease>
+    <ClientExportH>..\_UmtsExportH</ClientExportH>
+    <ServerExportH>..\..\umtsserver\_UmtsExportH</ServerExportH>
+    <arithmeticExportH>..\..\mplat\exporth\arithmetic</arithmeticExportH>
+    <mplatExportH>..\..\mplat\exportH</mplatExportH>
+    <adapterExportH>..\..\mplat\adaptermanager.v6\exportH</adapterExportH>
+    <ExtentLibPath>..\..\output\Extentlib</ExtentLibPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <_PropertySheetDisplayName>ActivexDefault</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <OutputFile>
+      </OutputFile>
+      <AdditionalLibraryDirectories>../;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="OutputDebug">
+      <Value>$(OutputDebug)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OutputRelease">
+      <Value>$(OutputRelease)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OutputDebug64">
+      <Value>$(OutputDebug64)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OutputRelease64">
+      <Value>$(OutputRelease64)</Value>
+    </BuildMacro>
+    <BuildMacro Include="PDBRelease">
+      <Value>$(PDBRelease)</Value>
+    </BuildMacro>
+    <BuildMacro Include="MAPRelease">
+      <Value>$(MAPRelease)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibDebug">
+      <Value>$(LibDebug)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibRelease">
+      <Value>$(LibRelease)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibDebug64">
+      <Value>$(LibDebug64)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LibRelease64">
+      <Value>$(LibRelease64)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TempDebug">
+      <Value>$(TempDebug)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TempRelease">
+      <Value>$(TempRelease)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ClientExportH">
+      <Value>$(ClientExportH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ServerExportH">
+      <Value>$(ServerExportH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="arithmeticExportH">
+      <Value>$(arithmeticExportH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="mplatExportH">
+      <Value>$(mplatExportH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="adapterExportH">
+      <Value>$(adapterExportH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ExtentLibPath">
+      <Value>$(ExtentLibPath)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

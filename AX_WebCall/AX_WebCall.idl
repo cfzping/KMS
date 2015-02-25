@@ -1,0 +1,63 @@
+// AX_WebCall.idl : AX_WebCall 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(AX_WebCall.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(6F9F4B1E-D45B-4679-B09F-419D569EDA57),
+	dual,
+	nonextensible,
+	helpstring("ICCal_TWDispatch 接口"),
+	pointer_default(unique)
+]
+interface ICCal_TWDispatch : IDispatch{
+	[id(1), helpstring("方法Call")] HRESULT Call([in] BSTR Modal, [in] BSTR FunCall, [in] BSTR StrVar, [in] BSTR strVar2, [out,retval] BSTR* strout);
+	[id(2), helpstring("方法ReleaseAll")] HRESULT ReleaseAll(void);
+	[id(3), helpstring("方法CalShowWindowsResouce")] HRESULT CalShowWindowsResouce([in] BSTR source);
+	[id(4), helpstring("方法Cal_CallOne")] HRESULT Cal_CallOne([in] BSTR Modal, [in] BSTR FunCall, [in] BSTR StrVar, [out,retval] BSTR* strout);
+	[id(5), helpstring("方法Cal_CallOneWithCallBack")] HRESULT Cal_CallOneWithCallBack([in] BSTR Modal, [in] BSTR FunCall, [in] BSTR StrVar, [in] VARIANT jsFun);
+	[id(6), helpstring("方法Cal_CallOneWithThreadCallBack")] HRESULT Cal_CallOneWithThreadCallBack([in] BSTR Modal, [in] BSTR FunCall, [in] BSTR StrVar, [in] VARIANT jsFun, BSTR* strout);
+	[id(7), helpstring("方法Cal_CallOneWithCallBackEx")] HRESULT Cal_CallOneWithCallBackEx([in] BSTR Modal, [in] BSTR FunCall, [in] BSTR StrVar, [in] VARIANT jsFun, BSTR* strout);
+	[id(8), helpstring("方法Cal_CallTwo")] HRESULT Cal_CallTwo([in] BSTR Modal, [in] BSTR FunCall, [in] BSTR StrVar1, [in] BSTR StrVar2, [out,retval] BSTR* strout);
+	[id(9), helpstring("方法Cal_CallTwoWithCallBackEx")] HRESULT Cal_CallTwoWithCallBackEx([in] BSTR Modal, [in] BSTR FunCall, [in] BSTR StrVar1, [in] BSTR StrVar2, [in] VARIANT jsFun, [out,retval] BSTR* strout);
+	[id(10), helpstring("方法DownLoadPdf")] HRESULT DownLoadPdf([in] BSTR KeyValue, [in] BSTR KeyPath, [in] LONG Future);
+	[id(11), helpstring("方法Cal_SignPdf")] HRESULT Cal_SignPdf([in] BSTR Reason, [in] BSTR local, [in] LONG x1, [in] LONG y1, [in] LONG x2, [in] LONG y2,[in] LONG ipage, [out,retval] LONG* iRet);
+	[id(12), helpstring("方法SetPDFPIC")] HRESULT SetPDFPIC([in] BSTR Base64Pic, [out,retval] LONG* lRet);
+	[id(13), helpstring("方法GetInterfaceSafetyOptions")] HRESULT GetInterfaceSafetyOptions([in] REFIID riid, [in,out] DWORD* pdwSupportedOptions, [in,out] DWORD* pdwEnabledOptions);
+	[id(14), helpstring("方法SetInterfaceSafetyOptions")] HRESULT SetInterfaceSafetyOptions([in] REFIID riid, [in] DWORD dwOptionSetMask , [in] DWORD dwEnabledOptions);
+	[id(15), helpstring("方法CalandtechNativeUI")] HRESULT CalandtechNativeUI([in] BSTR name, [in] LONG type, [out,retval] BSTR* retstr);
+	[id(16), helpstring("方法UI_Init")] HRESULT UI_Init([in] LONG dlgnum, [in] LONG type, [out,retval] BSTR* result);
+	[id(17), helpstring("方法UI_init_EX")] HRESULT UI_init_EX([in] LONG dlgnum, [in] LONG type, [in] LONG cx, [in] LONG cy, [in] LONG hx, [in] LONG hy, [out,retval] BSTR* result);
+};
+[
+	uuid(4A3F3DFC-924D-418E-9B11-809859ED1EF6),
+	version(1.0),
+	helpstring("AX_WebCall 1.0 类型库")
+]
+library AX_WebCallLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(2226E15B-0613-4765-81D6-9FF3E41EB351),
+		helpstring("_ICCal_TWDispatchEvents 接口")
+	]
+	dispinterface _ICCal_TWDispatchEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(9B2F3F22-FEC2-49D4-BC8C-864C74DE4A5F),
+		helpstring("CCal_TWDispatch Class")
+	]
+	coclass CCal_TWDispatch
+	{
+		[default] interface ICCal_TWDispatch;
+		[default, source] dispinterface _ICCal_TWDispatchEvents;
+	};
+};

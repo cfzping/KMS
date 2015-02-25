@@ -1,0 +1,23 @@
+HKCR
+{
+	AX_WebCall.CCal_TWDispatch.1 = s 'CCal_TWDispatch Class'
+	{
+		CLSID = s '{9B2F3F22-FEC2-49D4-BC8C-864C74DE4A5F}'
+	}
+	AX_WebCall.CCal_TWDispatch = s 'CCal_TWDispatch Class'
+	{
+		CLSID = s '{9B2F3F22-FEC2-49D4-BC8C-864C74DE4A5F}'
+		CurVer = s 'AX_WebCall.CCal_TWDispatch.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9B2F3F22-FEC2-49D4-BC8C-864C74DE4A5F} = s 'CCal_TWDispatch Class'
+		{
+			ProgID = s 'AX_WebCall.CCal_TWDispatch.1'
+			VersionIndependentProgID = s 'AX_WebCall.CCal_TWDispatch'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			'TypeLib' = s '{4A3F3DFC-924D-418E-9B11-809859ED1EF6}'
+		}
+	}
+}

@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'AX_WebCall'
+		'AX_WebCall.EXE'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

@@ -1,0 +1,8 @@
+
+LIBRARY      "AX_WebCallPS"
+
+EXPORTS
+	DllGetClassObject		PRIVATE
+	DllCanUnloadNow			PRIVATE
+	DllRegisterServer		PRIVATE
+	DllUnregisterServer		PRIVATE

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="ActivexDefault"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="../;"
+		PreprocessorDefinitions="_USE_32BIT_TIME_T"
+		Detect64BitPortabilityProblems="true"
+		DisableSpecificWarnings="4996"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		OutputFile=""
+		AdditionalLibraryDirectories="../;"
+	/>
+	<UserMacro
+		Name="OutputDebug"
+		Value="..\..\output\Bin\Debug"
+	/>
+	<UserMacro
+		Name="OutputRelease"
+		Value="..\..\output\Bin\Release"
+	/>
+	
+	<UserMacro
+		Name="OutputDebug64"
+		Value="..\..\output\Bin\Debug64"
+	/>
+	<UserMacro
+		Name="OutputRelease64"
+		Value="..\..\output\Bin\Release64"
+	/>
+
+	<UserMacro
+		Name="PDBRelease"
+		Value="..\..\output\bin\PDBRelease"
+	/>
+	<UserMacro
+		Name="MAPRelease"
+		Value="..\..\output\bin\MAPRelease"
+	/>
+	<UserMacro
+		Name="LibDebug"
+		Value="..\..\output\Lib\Debug"
+	/>
+	<UserMacro
+		Name="LibRelease"
+		Value="..\..\output\Lib\Release"
+	/>
+	
+	<UserMacro
+		Name="LibDebug64"
+		Value="..\..\output\Lib\Debug64"
+	/>
+	<UserMacro
+		Name="LibRelease64"
+		Value="..\..\output\Lib\Release64"
+	/>
+
+	<UserMacro
+		Name="TempDebug"
+		Value="..\..\Obj\Debug"
+	/>
+	<UserMacro
+		Name="TempRelease"
+		Value="..\..\Obj\Release"
+	/>
+	<UserMacro
+		Name="ClientExportH"
+		Value="..\_UmtsExportH"
+	/>
+	<UserMacro
+		Name="ServerExportH"
+		Value="..\..\umtsserver\_UmtsExportH"
+	/>
+	<UserMacro
+		Name="arithmeticExportH"
+		Value="..\..\mplat\exporth\arithmetic"
+	/>
+	<UserMacro
+		Name="mplatExportH"
+		Value="..\..\mplat\exportH"
+	/>
+	<UserMacro
+		Name="adapterExportH"
+		Value="..\..\mplat\adaptermanager.v6\exportH"
+	/>
+	<UserMacro
+		Name="ExtentLibPath"
+		Value="..\..\output\Extentlib"
+	/>
+	
+</VisualStudioPropertySheet>

@@ -1,0 +1,111 @@
+<html>
+<body onload=""> 
+<div >
+    <p>
+    <ifame>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%" valign = "top">
+        <tr> 
+		  	<td colspan="3" style="height: 12px";>
+		  		<object classid="CLSID:9B2F3F22-FEC2-49D4-BC8C-864C74DE4A5F" 
+		  			name="CCryFunction" hight=576 id="CryActivex" style="height: 564px; width: 600px;"  >
+					
+				</object>
+		 	</td>
+		 	<td valign = "top">
+                <input type="button" name="SignDocument" value="Sign" onClick="SignDocument();" >
+			</td>
+			<td valign = "top">
+                <input type="button" name="openFile" value="1加1" onClick="openFile();" >
+			</td>
+			<td valign = "top">
+			<table style="width: 60px" valign = "top">
+					<tr >
+						<td colspan="3" style="width: 49px">
+                			<input type="button" name="ShowToolbar" value="ShowToolbar" onClick="ShowToolbar();">
+						</td>
+					</tr>
+				</table>
+				 
+			</td>
+		 </tr>
+		
+		 <tr>
+			<td styple="width: 900px">
+				<textarea name="source" id="source" rows="6" cols="150" ></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td styple="width: 900px">
+				<textarea name="source1" id="source1" rows="6" cols="150"></textarea>
+			</td>
+		</tr>
+</table> 
+</ifame>
+
+	</p>  
+</div>
+
+<script language="javascript">
+
+
+function SignDocument()
+{
+
+	//
+	var ret;
+	
+	ret=document.getElementById("CryActivex");
+	
+	strret=ret.Cal_CallTwo("DllDriver","Bind_GetCert","是否判断时间","是否查找交换证书或者签名证书");
+	//strret=ret.Cal_CallTwo("DllDriver","Bind_GetCert","是否判断时间","是否查找交换证书或者签名证书");;//
+	//strret=ret.Cal_CallTwo("DllDriver","Login_GetCert","同上","同上");;//默认只显示交换证书
+
+	alert(strret);
+	strret=ret.Cal_CallTwo("DllDriver","Login_GetCert",strret,"同上");;//默认只显示交换证书
+	alert(strret);
+	return ;
+	var strret;
+	//strret=ret.CalandtechNativeUI(0,0);
+	strret=ret.UI_init_EX(0,0,100,100,500,800);
+	alert(strret);return;
+	strret=ret.Cal_CallTwoWithCallBackEx("UrlDll","DownLoadRes","","http://192.168.100.240:8080/esap_proxy/pc/doc/signfile_download?order_id=1&document_id=1",printMsg);//YWJj
+
+	//strret=ret.Cal_CallTwo("UrlDll","UPLoadResPer","","http://192.168.100.158:8080/test1/servlet/DownLoad");;//YWJj
+	//alert(strret);
+	//strret=ret.Cal_SignPdf("","",100,100,250,150,1);
+	alert(strret);
+}
+
+ function printMsg(s1,s2,s3) {
+
+        alert("s1:"+s1+"s2:"+s2+"s3:"+s3);
+
+    }
+
+
+function openFile()
+{
+	var retl=CryActivex.WordToPDFFun("D:\\123.docx","");
+	alert(retl);
+	
+	return ;
+	var ret = "2";
+
+
+	CryActivex.InitHandle(ret);
+	alert(ret);
+	ret=CryActivex.GetCertEX();
+	alert(ret);
+	//var ret2=CryActivex.Decrypt("pSci2qCMFq5+lFVLulfq32Ag6SQNNJmq5+ZIQq0O1x+0bpEiLYKJtuXi06qulbSw+WyFlNTw8goGIifGalj1RDNlVHy6HO1rmZ8LISd15N8BIvBAgzzGFpIoT8A/tl+HAqC8EiJrNYUae6Me15vkSEKds+Ga2+OdrGJ6euibmD4=");
+	//alert(ret2);
+	//ret2=CryActivex.SignDigest("yWJj");
+	//alert(ret2);
+	ret2=CryActivex.Decrypt("juFV0idEb75O6lFmMxESEshkaD/wC6G18nhKqRLaBTOH6M3vD9+xVRGxBjVLbXaF8XYTtXYF9n8Xo7lDjqKbZywX2A2R1CwlUQXLu+N/q2bzcx/tKHerDa3FxOigLpvklleu4fo8PNPHyvKAERAHWPrJIYYgr69zSQzadtgNFjY=");
+	alert(ret2);
+}
+
+
+</script>
+
+</body>
+</html>
